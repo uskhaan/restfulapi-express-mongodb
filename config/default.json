@@ -1,0 +1,3 @@
+{
+    "db": "mongodb+srv://gasolel:gasolel@cluster0.i0r77.mongodb.net/facultycrud?retryWrites=true&w=majority"
+}
