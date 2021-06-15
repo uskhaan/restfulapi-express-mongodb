@@ -31,21 +31,33 @@ html(lang='en')
               input#email.form-control(type='text' name='email' aria-describedby='bodyHelp' placeholder='E-Mail address of member')
               small#bodyHelp.form-text.text-muted Enter E-mail Address
             .form-group
-              label(for='title') ID
-              input#fid.form-control(type='text' name='fid' aria-describedby='titleHelp' placeholder="Member's ID")
-              small#titleHelp.form-text.text-muted Enter ID
+              label(for='title') Course Code
+              input#course_code.form-control(type='text' name='course_code' aria-describedby='titleHelp' placeholder="Selected Course Code")
+              small#titleHelp.form-text.text-muted Enter Couse Code
             .form-group
               label(for='title') Gender
               input#gender.form-control(type='text' name='gender' aria-describedby='titleHelp' placeholder='Gender of the member')
               small#titleHelp.form-text.text-muted Enter Gender
             .form-group
-              label(for='title') Course Code
-              input#coursecode.form-control(type='text' name='coursecode' aria-describedby='titleHelp' placeholder='Assigned Course Code')
-              small#titleHelp.form-text.text-muted Enter Course Code
+              label(for='title') Street
+              input#street_address.form-control(type='text' name='street_address' aria-describedby='titleHelp' placeholder='Enter Street Name')
+              small#titleHelp.form-text.text-muted Enter Street Name
             .form-group
-              label(for='title') Phone#
-              input#phone.form-control(type='text' name='phone' aria-describedby='titleHelp' placeholder='Phone Number of member')
-              small#titleHelp.form-text.text-muted Enter Phone #
+              label(for='title') City
+              input#city.form-control(type='text' name='city' aria-describedby='titleHelp' placeholder='Enter City Name')
+              small#titleHelp.form-text.text-muted Enter City Name
+            .form-group
+              label(for='title') Country
+              input#country.form-control(type='text' name='country' aria-describedby='titleHelp' placeholder='Enter Country Name')
+              small#titleHelp.form-text.text-muted Enter Country Name
+            .form-group
+              label(for='title') Phone#1
+              input#phone1.form-control(type='text' name='phone1' aria-describedby='titleHelp' placeholder='Phone Number of member')
+              small#titleHelp.form-text.text-muted Enter Phone # 1
+            .form-group
+              label(for='title') Phone#2
+              input#phone2.form-control(type='text' name='phone2' aria-describedby='titleHelp' placeholder='Phone Number of member')
+              small#titleHelp.form-text.text-muted Enter Phone # 2
           .modal-footer
             button#addBtn.btn.btn-info Insert Record
             button.btn.btn-secondary(type='button' data-dismiss='modal')
@@ -64,28 +76,40 @@ html(lang='en')
             br
             .form-group
               label(for='updateName') Name
-              input#updateName.form-control(type='text' name='updateName' aria-describedby='updateHelpId' placeholder='')
+              input#updateName.form-control(type='text' name='name' aria-describedby='updateHelpId' placeholder='')
               small#updateHelpId.form-text.text-muted Enter Name to Update
             .form-group
               label(for='updateEmail') E-Mail
-              input#updateEmail.form-control(type='text' name='updateEmail' aria-describedby='updateHelpId' placeholder='')
+              input#updateEmail.form-control(type='email' name='email' aria-describedby='updateHelpId' placeholder='')
               small#updateHelpId.form-text.text-muted Enter E-Mail to Update
             .form-group
-              label(for='updateFID') ID
-              input#updateFID.form-control(type='text' name='updateFID' aria-describedby='updateHelpId' placeholder='')
+              label(for='updateCourse_code') Course Code
+              input#updateCourse_code.form-control(type='text' name='updateCourse_code' aria-describedby='updateHelpId' placeholder='')
               small#updateHelpId.form-text.text-muted Enter ID to Update
             .form-group
               label(for='updateGender') Gender
               input#updateGender.form-control(type='text' name='updateGender' aria-describedby='updateHelpId' placeholder='')
               small#updateHelpId.form-text.text-muted Enter Gender to Update
             .form-group
-              label(for='updateCourseC') Course Code
-              input#updateCourseC.form-control(type='text' name='updateCourseC' aria-describedby='updateHelpId' placeholder='')
+              label(for='updateStreet') Street
+              input#updateStreet.form-control(type='text' name='updateStreet' aria-describedby='updateHelpId' placeholder='')
               small#updateHelpId.form-text.text-muted Enter Course Code to Update
             .form-group
-              label(for='updatePhone') Phone#
-              input#updatePhone.form-control(type='text' name='updatePhone' aria-describedby='updateHelpId' placeholder='')
+              label(for='updateCity') City
+              input#updateCity.form-control(type='text' name='updateCity' aria-describedby='updateHelpId' placeholder='')
               small#updateHelpId.form-text.text-muted Enter Phone# to Update
+            .form-group
+              label(for='updateCountry') Country
+              input#updateCountry.form-control(type='text' name='updateCountry' aria-describedby='updateHelpId' placeholder='')
+              small#updateHelpId.form-text.text-muted Enter Phone# to Update
+            .form-group
+              label(for='updatePhone1') Phone#1
+              input#updatePhone1.form-control(type='text' name='updatePhone1' aria-describedby='updateHelpId' placeholder='')
+              small#updateHelpId.form-text.text-muted Enter Phone# to Update
+            .form-group
+              label(for='updatePhone2') Phone#2
+              input#updatePhone2.form-control(type='text' name='updatePhone2' aria-describedby='updateHelpId' placeholder='')
+              small#updateHelpId.form-text.text-muted Enter Phone# to Update                            
           .modal-footer
             button#updateSave.btn.btn-primary Update
             button.btn.btn-secondary(type='button' data-dismiss='modal')

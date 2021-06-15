@@ -23,14 +23,17 @@ router.get("/:id", async (req, res) => {
 //update a record
 router.put("/:id", async (req, res) => {
   let product = await Product.findById(req.params.id);
+
+  let phoneNo = [req.body.phone1, req.body.phone2];
   product.name = req.body.name;
   product.gender = req.body.gender;
   product.email = req.body.email;
-  product.address.street_address = req.body.address.street_address;
-  product.address.city = req.body.address.city;
-  product.address.country = req.body.address.country;
+  product.address.street_address = req.body.street_address;
+  product.address.city = req.body.city;
+  product.address.country = req.body.country;
   product.course_code = req.body.course_code;
-  product.phone_numbers = req.body.phone_numbers;
+  product.phone_numbers = phoneNo;
+
   console.log("Product: ", product);
   await product.save();
   return res.send(product);
@@ -44,16 +47,18 @@ router.delete("/:id", async (req, res) => {
 
 //Insert a record
 router.post("/", async (req, res) => {
+  console.log("REQ BODY: ", req.body);
   let product = new Product();
 
+  let phoneNo = [req.body.phone1, req.body.phone2];
   product.name = req.body.name;
   product.gender = req.body.gender;
   product.email = req.body.email;
-  product.address.street_address = req.body.address.street_address;
-  product.address.city = req.body.address.city;
-  product.address.country = req.body.address.country;
+  product.address.street_address = req.body.street_address;
+  product.address.city = req.body.city;
+  product.address.country = req.body.country;
   product.course_code = req.body.course_code;
-  product.phone_numbers = req.body.phone_numbers;
+  product.phone_numbers = phoneNo;
 
   await product.save();
   console.log("Product: ", product);
